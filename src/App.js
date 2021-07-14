@@ -1,24 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from "./components/counter";
+import  {Route, Switch,Link, BrowserRouter as Router} from "react-router-dom";
+import Gallery from "./components/Gallery";
+import About from "./components/About";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <nav className="navbar navbar-expand navbar-brand m-5">
+              <ul className="navbar-nav">
+                  <li>
+                      <Link className="nav-link" to="/home">Home</Link>
+                  </li>
+                  <li>
+                      <Link className="nav-link" to="/counter">Counter</Link>
+                  </li>
+                  <li>
+                      <Link className="nav-link" to="/about">About</Link>
+                  </li>
+                  <li>
+                      <Link className="nav-link" to="/gallery">Gallery</Link>
+                  </li>
+              </ul>
+          </nav>
+          <div className="container">
+              <Switch>
+                  <Route path="/home" ></Route>
+                  <Route path="/counter" component={Counter}></Route>
+                  <Route path="/about" component={About}></Route>
+                  <Route path="/gallery" component={Gallery}></Route>
+              </Switch>
+          </div>
+      </Router>
+
+      /*<div className="m-3">
+        <Counter title="Profile" value={1} image="images/coby-chat-instagram.jpg"/>
+        <Counter title="Cat" value={1} image="images/chat-ragdoll-photo-du-2-mars-2019_6159252.jpg"/>
+
+      </div>*/
   );
 }
 

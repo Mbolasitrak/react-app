@@ -13,7 +13,7 @@ class Counter extends Component {
 
     compute=(op)=>{
         let sign = op === '+'?1:-1
-        if(this.state.counter == 1 && op === '-') sign=0;
+        if(this.state.counter === 1 && op === '-') sign=0;
         let c = this.state.counter+sign;
 
         this.setState({
@@ -39,8 +39,8 @@ class Counter extends Component {
                 <div className="card-body">
                     {
                         this.state.list.map((v,index)=>
-                            <span>{index}
-                            <img width={100} src={this.props.image? this.props.image:'images/coby-chat-instagram.jpg'}/>
+                            <span key={index}>{index}
+                            <img width={100} src={this.props.image? this.props.image:'images/coby-chat-instagram.jpg'} alt=""/>
                             </span>
                         )
                     }

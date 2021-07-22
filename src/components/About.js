@@ -50,7 +50,7 @@ class About extends Component {
                     </div>
                     <div className="row p-2">
                         <div className='col col-auto'>
-                            <img width={100} src={this.state.contact.profile}/>
+                            <img width={100} alt="" src={this.state.contact.profile}/>
                         </div>
                         <div className="col">
                             <ul className="list-group">
@@ -83,21 +83,28 @@ class About extends Component {
                             </div>
                         </form>
                         <table className="table">
+                            <thead>
                             <tr>
-                                <th>ID</th><th>Skill</th>
+                                <th>ID</th>
+                                <th>Skill</th>
+                                <th></th>
                             </tr>
+                            </thead>
+
+                            <tbody>
                             {
                                 this.state.skills.map((skill,index)=>
-                                        <tr>
-                                            <td>{skill.id}</td>
-                                            <td>{skill.skill}</td>
-                                            <td>
-                                                <button className="btn btn-danger" onClick={()=>this.onDelete(skill)} >X</button>
-                                            </td>
+                                    <tr key={skill.id}>
+                                        <td>{skill.id}</td>
+                                        <td>{skill.skill}</td>
+                                        <td>
+                                            <button className="btn btn-danger" onClick={()=>this.onDelete(skill)} >X</button>
+                                        </td>
 
-                                        </tr>
+                                    </tr>
                                 )
                             }
+                            </tbody>
                         </table>
                     </div>
                 </div>

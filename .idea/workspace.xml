@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f49c2a4-9e3a-4132-ae01-39d3cede46a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/HitDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HitItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchHitForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/counter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +54,9 @@
       <workItem from="1626729636340" duration="983000" />
       <workItem from="1626877756857" duration="3032000" />
       <workItem from="1626950838603" duration="23499000" />
+      <workItem from="1627025285499" duration="14716000" />
+      <workItem from="1627112178599" duration="6847000" />
+      <workItem from="1627134104247" duration="4669000" />
     </task>
     <servers />
   </component>

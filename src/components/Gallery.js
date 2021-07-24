@@ -27,7 +27,7 @@ class Gallery extends Component {
         axios.get(url).then((resp )=>{
             console.log(resp)
             let totalP = (resp.data.totalHits%this.state.pageSize===0)?
-                resp.data.totalHits/this.state.pageSize:1+resp.data.totalHits/this.state.pageSize;
+                resp.data.totalHits/this.state.pageSize:1+Math.floor(resp.data.totalHits/this.state.pageSize);
             this.setState({
                 hits:resp.data.hits,
                 totalPages:totalP,
@@ -45,7 +45,14 @@ class Gallery extends Component {
         /*this.setState({
             currentkeyword:keyword
         })*/
-        this.getHits(keyword);
+        let page=1;
+        this.setState({
+            currentPage:1,
+            page: []
+        },()=>{
+            this.getHits(keyword);
+        })
+
 
     }
     goToPage=(page)=>{
@@ -75,7 +82,7 @@ class Gallery extends Component {
                 <div className="row">
                 {
                     this.state.hits.map(hit=>
-                        <HitItem hit={hit} details={false} />
+                        <HitItem hit={hit} details={false} key={hit.id}/>
                     )
                 }
                 </div>
